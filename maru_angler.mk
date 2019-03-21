@@ -1,12 +1,11 @@
 #
-# Copyright 2015 The Android Open Source Project
 # Copyright 2019 The Maru OS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+#    http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,6 +14,16 @@
 # limitations under the License.
 #
 
-add_lunch_combo aosp_angler-userdebug
+# -----------------------------------------------------------------------------
+# Include LineageOS stuff
 
-add_lunch_combo maru_angler-userdebug
+$(call inherit-product, device/huawei/angler/lineage.mk)
+
+# -----------------------------------------------------------------------------
+# Include Maru stuff
+
+$(call inherit-product, vendor/maruos/device-maru.mk)
+$(call inherit-product, vendor/maruos/BoardConfigVendor.mk)
+
+PRODUCT_NAME := maru_angler
+PRODUCT_MODEL := Maru on the Nexus 6P

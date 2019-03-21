@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2015 The Android Open-Source Project
+# Copyright (C) 2019 The Maru OS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -32,7 +33,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 # Inline kernel building
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/huawei/angler
-TARGET_KERNEL_CONFIG := lineageos_angler_defconfig
+TARGET_KERNEL_CONFIG := maru-angler_defconfig
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
@@ -125,8 +126,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_AUX_OS_VARIANT_LIST := angler
 
 TARGET_RECOVERY_FSTAB = device/huawei/angler/fstab.angler
-# write vendor modules to system
-TARGET_COPY_OUT_VENDOR := system
+TARGET_COPY_OUT_VENDOR := vendor
 TARGET_RELEASETOOLS_EXTENSIONS := device/huawei/angler
 
 BOARD_SEPOLICY_DIRS += \

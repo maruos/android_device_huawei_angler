@@ -34,7 +34,7 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 #PRODUCT_COPY_FILES += device/huawei/angler/fstab.aosp_angler:root/fstab.angler
 
 $(call inherit-product, device/huawei/angler/device.mk)
-$(call inherit-product-if-exists, vendor/huawei/angler/angler-vendor.mk)
+$(call inherit-product-if-exists, vendor/huawei/angler/device-vendor.mk)
 
 PRODUCT_PACKAGES += \
     Launcher3 \
